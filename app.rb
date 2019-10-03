@@ -1,7 +1,5 @@
 require 'sinatra/base'
 
-# set :session_secret, 'super secret'
-
 class Battle < Sinatra::Base
   enable :sessions
 # Get the form on the home page, as designed in the index.erb file.
