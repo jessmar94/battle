@@ -1,6 +1,6 @@
-<%= @player_1_name %> vs. <%= @player_2_name %>
+<%= @game.player_1.name %> vs. <%= @game.player_2.name %>
 <div>
-  <%= @player_2_name %>: <%= Player::DEFAULT_POINTS %>HP
+  <%= @game.player_2.name %>: <%= Player::DEFAULT_POINTS %>HP
 </div>
 <div>
   <form action="/attack">
