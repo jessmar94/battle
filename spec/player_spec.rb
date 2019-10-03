@@ -10,13 +10,13 @@ describe Player do
     end
 
     it 'sets player HP to 60' do
-      expect(player_1.points).to eq 60
+      expect(player_1.points).to eq Player::DEFAULT_POINTS
     end
   end
 
   describe '#deduct_points' do
     it 'reduces player 2 by 10 HP' do
-      
+      expect { player_2.deduct_points }.to change { player_2.points }.by (-10)
     end
   end
 end
