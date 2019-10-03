@@ -1,6 +1,7 @@
 class Game
 
-  def attack(opponent)
-    "hello"
+  def attack(player)
+    player.deduct_points
   end
+  
 end
