@@ -11,6 +11,8 @@ class Player
 
   def attack(opponent)
     opponent.deduct_points
+    # @game.attack(opponent)
+    # opponent.deduct_points
   end
   #
   def deduct_points
