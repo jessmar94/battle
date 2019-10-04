@@ -10,6 +10,20 @@ feature 'Attacking' do
     click_button 'Attack'
     expect(page).to have_content 'Olly: 50HP'
   end
+
+  scenario 'see player 1 HP reduce by 10' do
+    sign_in_and_play
+    click_button 'Attack'
+    click_button 'OK'
+    click_button 'Attack'
+    expect(page).to have_content 'Jess: 50HP'
+  end
+
+  scenario 'see OK button to take player back to start of game' do
+    sign_in_and_play
+    click_button 'Attack'
+    expect(page).to have_button 'OK'
+  end
 end
 
 

@@ -3,6 +3,11 @@ feature 'View hit points' do
     sign_in_and_play
     expect(page).to have_content 'Olly: 60HP'
   end
+
+  scenario 'see player 1 hit points' do
+    sign_in_and_play
+    expect(page).to have_content 'Jess: 60HP'
+  end
 end
 
 # User has to click 'View Player 2's Hit Points in order to see their Hit points
