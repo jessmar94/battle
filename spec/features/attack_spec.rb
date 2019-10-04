@@ -6,12 +6,14 @@ feature 'Attacking' do
   end
 
   scenario 'see player 2 HP reduce by 10' do
+    allow_any_instance_of(Player).to receive(:rand) { 10 }
     sign_in_and_play
     click_button 'Attack'
     expect(page).to have_content 'Olly: 50HP'
   end
 
   scenario 'see player 1 HP reduce by 10' do
+    allow_any_instance_of(Player).to receive(:rand) { 10 }
     sign_in_and_play
     click_button 'Attack'
     click_button 'OK'

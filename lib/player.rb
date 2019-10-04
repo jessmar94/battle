@@ -10,7 +10,11 @@ class Player
   end
 
   def deduct_points
-    @hit_points -= 10
+    @hit_points -= random_points
+  end
+
+  def random_points
+    rand(1..15)
   end
 
 end

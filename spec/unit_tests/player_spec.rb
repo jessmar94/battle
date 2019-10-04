@@ -16,7 +16,8 @@ describe Player do
   end
 
   describe '#deduct_points' do
-    it 'reduces player 2 points by 10' do
+    it 'reduces player 2 points by random number' do
+      allow(player_2).to receive(:rand).and_return(10)
       expect { player_2.deduct_points }.to change { player_2.hit_points }.by(-10)
     end
   end

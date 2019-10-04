@@ -1,5 +1,6 @@
 feature 'Switch turns' do
   scenario 'player 2 can now attack player 1' do
+    allow_any_instance_of(Player).to receive(:rand) { 10 }
     sign_in_and_play
     click_button 'Attack'
     click_button 'OK'
@@ -9,6 +10,6 @@ feature 'Switch turns' do
 
   scenario 'displays who is playing next' do
     sign_in_and_play
-    expect(page).to have_content "Jess, it's your turn!" 
+    expect(page).to have_content "Jess, it's your turn!"
   end
 end
