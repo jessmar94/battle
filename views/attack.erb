@@ -2,8 +2,16 @@
 <div>
   <%= @game.defender.name %>: <%= @game.defender.hit_points %>HP
 </div>
-<div>
-  <form action="/switch_turn" method="post">
-    <input type="submit" value="OK">
-  </form>
-</div>
+<% if @game.game_over == false %>
+  <div>
+    <form action="/switch_turn" method="post">
+      <input type="submit" value="OK">
+    </form>
+  </div>
+<% else %>
+  <div>
+    <form action="/game_over">
+      <input type="submit" value="OK">
+    </form>
+  </div>
+<% end %> 

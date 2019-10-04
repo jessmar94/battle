@@ -23,7 +23,11 @@ class Game
   end
 
   def switch_turn
-    @players.reverse!  
+    @players.reverse!
+  end
+
+  def game_over
+    defender.hit_points <=0
   end
 
 end

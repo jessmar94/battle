@@ -12,6 +12,5 @@ class Player
   def deduct_points
     @hit_points -= 10
   end
-  
 
 end
